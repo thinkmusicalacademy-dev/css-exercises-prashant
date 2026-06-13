@@ -10,7 +10,7 @@ body {
   margin: 0;
   background: #aaa;
   color: #333;
-  /* I'll give you this one for free lol */
+  /* I'll give you this one for free */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,14 +18,9 @@ body {
 
 .modal {
   background: white;
-  width: 1920px;
+  width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, .2);
-  padding: 15px;
-  display: flex;
-  gap: 16px;
-  padding: 16px;
-
 }
 
 .icon {
@@ -37,7 +32,6 @@ body {
   height: 42px;
   border-radius: 50%;
   display: flex;
-  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 }
@@ -51,12 +45,10 @@ body {
   height: 24px;
   width: 24px;
   display: flex;
-  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
-  margin-left: auto;
 }
 
 button {
@@ -77,6 +69,20 @@ button.cancel {
   color: royalblue;
 }
 
+/* SOLUTION: */
+
+.modal {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.icon {
+  /* this keeps the icon from getting smashed by the text */
+  flex-shrink: 0;
+}
+
+/* header container should be wrapped around the button element as well in order for flex style to work */
 .header {
   display: flex;
   align-items: center;
